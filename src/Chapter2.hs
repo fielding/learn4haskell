@@ -763,7 +763,7 @@ smartReplicate :: [Int] -> [Int]
 smartReplicate l = concat (map (\x -> replicate x x ) l)
 
 smartReplicateConcatMap :: [Int] -> [Int]
-smartReplicateConcatMap l = concatMap (\x -> replicate x x) l
+smartReplicateConcatMap = concatMap (\x -> replicate x x)
 
 {- |
 =⚔️= Task 9
