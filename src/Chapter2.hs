@@ -904,6 +904,11 @@ and reverses it.
   cheating!
 -}
 
+-- lol, I'm a function hoarder or something
+slowRewind :: [a] -> [a]
+slowRewind [] = []
+slowRewind (x:xs) = rewind xs ++ [x]
+
 rewind :: [a] -> [a]
 rewind [] = []
 rewind (x:xs) = rewind xs ++ [x]
