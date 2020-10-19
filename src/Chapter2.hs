@@ -648,11 +648,11 @@ takeEven [x] = [x]
 takeEven (x:_:xs) = x: takeEven xs
 
 takeEvenGo :: [a] -> [a]
-takeEvenGo l = go 0 l
+takeEvenGo l = go True l
   where
-    go :: Int -> [a] -> [a]
+    go :: Bool -> [a] -> [a]
     go _ [] = []
-    go acc (x:xs) = if (mod acc 2) == 0 then (x: go (acc + 1) xs) else go (acc + 1) xs
+    go acc (x:xs) = if acc then (x: go (not acc) xs) else go (not acc) xs
 
 {- |
 =🛡= Higher-order functions
