@@ -553,6 +553,7 @@ steps we need to take in order to reduce the number to zero.
 
 🤔 Blitz question: can you guess what this number represents?
 stack size?
+smallest power of 2 greater than or equal to n?
 
 @
 divToZero :: Int -> Int
