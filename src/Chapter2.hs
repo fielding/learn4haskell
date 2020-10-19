@@ -910,8 +910,10 @@ slowRewind [] = []
 slowRewind (x:xs) = rewind xs ++ [x]
 
 rewind :: [a] -> [a]
-rewind [] = []
-rewind (x:xs) = rewind xs ++ [x]
+rewind = go []
+  where
+    go acc [] = acc
+    go acc (x:xs) =  go (x:acc) xs
 
 
 {-
